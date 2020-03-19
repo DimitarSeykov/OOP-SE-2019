@@ -44,6 +44,8 @@ bool Point::operator<(const Point& other){
     d1 = sqrt((this->getX() * this->getX()) + (this->getY() * this->getY()));
     d2 = sqrt((other.getX() * other.getX()) + (other.getY() * other.getY()));
 
+    //cout << d1 << " " << d2 << endl;
+
     return d1 < d2;// ? true : false;
 }
 
@@ -53,7 +55,7 @@ void Point::print()const {
 }
 
 ostream& operator<<(ostream& out, const Point& _p){
-    out << "Point p3 with coords: (";
+    out << "Point with coords: (";
     out << _p.getX() << " " << _p.getY();
     out << ")" << endl;
 
