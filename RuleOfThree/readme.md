@@ -50,9 +50,9 @@ Implement a class Movie. A movie is defined by
 - Description (char*, short annotation)
 
 ## task 5 
-# Note: You must have implemented task 4 first
+### Note: You must have implemented task 4 first
 Implement a class MoviesLibrary. It must support the following functionalities.
-- Add a movie tok the library
+- Add a movie to the library
 - Filter the movies by a Genre, By Director, by Year, by Score etc...
 - Create a "Watch Later" list. Add movies to it.
 - Remove movies from a watchlist.
