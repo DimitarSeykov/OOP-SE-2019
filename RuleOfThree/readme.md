@@ -37,3 +37,25 @@ Implement an int dynamic array. It should be able to perform the following opera
 - RemoveAt(int i) - removes the element at position `i`. All elements on it's right should be shifted to the left. (hint: Implement a `shiftLeft(int from pos)` method).
 - Empty() - returns true if the stack is empty (size == 0) and false otherwise.
 - Clear() - removes all elements from the array. 
+
+## Task 4
+Implement a class Movie. A movie is defined by
+- Title (char*)
+- Year (unsigned int)
+- Genres (list of custom enum)
+- Director (either a char* or an instance of a separate class, for example Person)
+- Producer (same as Director)
+- Cast (either a char** or a list of instances of a separate class, for example Person*) 
+- IMDB score (float)
+- Description (char*, short annotation)
+
+## task 5 
+# Note: You must have implemented task 4 first
+Implement a class MoviesLibrary. It must support the following functionalities.
+- Add a movie tok the library
+- Filter the movies by a Genre, By Director, by Year, by Score etc...
+- Create a "Watch Later" list. Add movies to it.
+- Remove movies from a watchlist.
+- Remove movies from the library (which would remove them from a watchlist, if they are in there)
+
+- Bonus: think about a way to allow multiple watchlists - for example a watchlist of comedies, watchlist for movies between 1970 and 1990 etc...
