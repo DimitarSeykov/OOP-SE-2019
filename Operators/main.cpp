@@ -29,6 +29,19 @@ int main(){
     //cout << (p2 < p1) << endl;
     */
 
+    /*
+    Point p;
+
+    cin >> p;
+
+    cout << p;
+
+    printDirect(p);
+
+    cout << calculateDistanceFromCenter(p) << endl;
+    */
+
+    /*
     srand(time(nullptr));
 
     const int sz = 10;
@@ -52,6 +65,8 @@ int main(){
     cout << "\nNow sorted:" << endl;
 
     printAllPoints(points, sz);
+    delete[] points;
+    */
 
     /**
     Sorting them was possible because we have overloaded operator<.
@@ -62,5 +77,20 @@ int main(){
     Then, you can see the actual comparisons that are being made by the std sorting algorithm.
     Pretty awesome in my opinion.
     */
+
+    /*
+
+
+    NumA a(10);
+
+    NumB b(12);
+
+    cout << a.sum(b) << endl;
+
+    */
+
+    Point p;
+
+    cout << p;
 
 }

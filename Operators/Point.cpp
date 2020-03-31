@@ -66,3 +66,16 @@ istream& operator>>(istream& in, Point& _p){
     in >> _p.x >> _p.y;
     return in;
 }
+
+
+void printDirect(const Point& _p){
+    cout << _p.x << " " << _p.y << endl;
+}
+
+double calculateDistanceFromCenter(const Point& _p){
+    return sqrt(_p.x * _p.x + _p.y * _p.y);
+}
+
+int NumA::sum(NumB& b){
+    return this->numA + b.numB;
+}
