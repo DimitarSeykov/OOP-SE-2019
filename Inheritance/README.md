@@ -1,4 +1,4 @@
-# Наследяване
+# Inheritance
 
 
  Create a class Building, which describes a given building with a height (meters, integer), area (square meters, float) and addres (char*). Define derived class House, which is additionally desribed with umber of floors (int) and home owner (char*). For both classes define:
