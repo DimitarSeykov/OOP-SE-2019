@@ -125,6 +125,90 @@ int binarySearchIter(int* arr, int n, int x){
     return -1;
 }
 
+int swap_ints(int &a, int &b){
+    int c = a;
+    a = b;
+    b = c;
+}
+
+///--------------------------
+///QuickSort
+int part(int arr[], int left, int right){
+    ///TODO make random pivot
+    int pivot = arr[right];
+    int i = left - 1;
+    for(int j = left; j < right; j++){
+        if(arr[j] <= pivot){
+            i++;
+            swap_ints(arr[i],arr[j]);
+        }
+    }
+    swap_ints(arr[i+1], arr[right]);
+    return (i+1);
+}
+
+void quickSort(int arr[], int left, int right){
+    if(left < right){
+        int pivot = part(arr, left, right);
+        quickSort(arr, left, pivot-1);
+        quickSort(arr, pivot+1, right);
+    }
+}
+///------------------------------
+
+
+void mergeArrays(int arr[], int left, int right, int mid){
+    int size1 = mid - left + 1;
+    int size2 = right - mid;
+
+    int L[size1], R[size2];
+
+    for(int i=0; i<size1; i++) {
+        L[i] = arr[left + i];
+    }
+    for(int j=0; j<size2; j++) {
+        R[j] = arr[mid + 1 + j];
+    }
+
+    int i = 0,
+        j = 0,
+        k = left;
+
+    while(i < size1 && j < size2){
+        if(L[i] <= R[j]){
+            arr[k] = L[i];
+            i++;
+        }
+        else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while(i<size1){
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while(j<size2){
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+}
+
+void mergeSort (int arr[], int left, int right){
+    if(left < right){
+        int mid = left + (right - left) / 2;
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+
+        mergeArrays(arr, left, right, mid);
+    }
+}
+
 
 int main(){
 
